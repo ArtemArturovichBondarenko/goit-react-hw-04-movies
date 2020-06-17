@@ -1,0 +1,25 @@
+* {
+    font-family: sans-serif;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.list_item {
+    margin-right: 20px;
+}
+
+.nav_link {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(41, 41, 41);
+
+}
+
+.nav_link:hover {
+    color: rgb(206, 56, 56);
+}

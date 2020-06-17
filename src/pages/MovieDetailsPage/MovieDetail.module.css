@@ -1,0 +1,45 @@
+.button {
+  margin: 5px;
+  content: 'pmm';
+}
+.button::before {
+  content: '\2190 ';
+
+}
+
+.section {
+  padding-top: 15px;
+  border-top: 3px solid rgb(116, 116, 116);
+
+}
+
+.div {
+  padding-top: 20px;
+  padding-bottom: 180px;
+  border-bottom: 3px solid rgb(116, 116, 116);
+
+
+}
+
+.img {
+  float: left;
+  margin-right: 20px;
+  
+}
+
+
+
+
+.ul {
+  display: flex;
+  padding-left: 0;
+}
+.li {
+  list-style: none;
+  margin-right: 10px;
+}
+
+.additional {
+  border-bottom: 3px solid rgb(116, 116, 116);
+
+}
