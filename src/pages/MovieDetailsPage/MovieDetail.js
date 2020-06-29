@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import style from './MovieDetail.module.css';
 
@@ -12,6 +12,8 @@ const MovieDetail = ({
   genres,
   id,
   onGoBack,
+  location,
+  history
 }) => (
   <>
     <button type="button" onClick={onGoBack} className={style.button}>
@@ -40,13 +42,27 @@ const MovieDetail = ({
         </ul>
       </div>
       <div className={style.additional}>
-        <h3 >Additional information</h3>
+        <h3>Additional information</h3>
         <ul>
           <li>
-            <Link to={`/movies/${id}/cast`}>Cast</Link>
+            <Link 
+              to={{
+                pathname: `/movies/${id}/cast`,
+                state: { from: location },
+              }}
+            >
+              Cast
+            </Link>
           </li>
           <li>
-            <Link to={`/movies/${id}/reviews`}>Reviews</Link>
+            <Link
+              to={{
+                pathname: `/movies/${id}/reviews`,
+                state: { from: location },
+              }}
+            >
+              Reviews
+            </Link>
           </li>
         </ul>
       </div>
